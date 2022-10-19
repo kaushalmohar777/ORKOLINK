@@ -1,0 +1,169 @@
+
+    
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar mt-5">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+  
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <img src="assets/img/fisrt.png">         
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="about.html">
+          <img src="assets/img/second.png">          
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="hello.html">
+          <img src="assets/img/third.png">           
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <img src="assets/img/four.png">     
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+         <img src="assets/img/five.png"> 
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <img src="assets/img/six.png"> 
+        </a>
+      </li><!-- End Dashboard Nav -->      
+    </ul>
+  
+  </aside><!-- End Sidebar-->
+  
+  <div class="container">
+  <main id="main" class="main">
+  
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Bordered Tabs -->
+          <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#bordered-home" type="button" role="tab" aria-controls="home" aria-selected="true">Today</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#bordered-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Yesterday</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#bordered-contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Day Before</button>
+            </li>
+          </ul>
+  
+          <!-- today Chat -->
+          <div class="tab-content pt-2" id="borderedTabContent">
+            <div class="tab-pane fade show active" id="bordered-home" role="tabpanel" aria-labelledby="home-tab">
+            <!-- <div class="container"> -->
+              <div class="messaging">
+                <div class="inbox_msg">
+                  <div class="mesgs">
+                    <div class="msg_history">
+
+                      <div class="incoming_msg" *ngFor="let data of inCommingMsg">
+                        
+                        <div class="incoming_msg_img"> 
+                          <img src="{{data.profile_img}}" alt="sunil"> 
+                        </div>
+                        <div class="received_msg">
+                          <div class="received_withd_msg">
+                            
+                           <p *ngIf="data.text !== ''">   
+                            {{data.text}}                             
+                           </p>
+
+                           <div class="incoming_msg_img" *ngIf="data.image !== ''"> 
+                            <img src="{{data.image}}"> 
+                           </div>
+
+                            <span class="time_date"> {{data.time}}<img src="{{data.icon}}"></span>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>  
+                </div>                    
+              </div> 
+              <div class="chat-form">
+                  <div class="control-form">
+                    <form class="form-inline"> 
+                      <div class="row g-3">
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control form-control-lg" id="inputPassword2" placeholder="Type a massage here"
+                          [(ngModel)]="entermessage" name="entermessage">
+                        </div>
+                        <div class="col-sm-4">
+                          <button type="button" class="btn btn-danger btn-lg mb-2 cuts"
+                          (click)="sendMsg()"><i class="bx bxl-telegram"></i> Update</button>
+                        </div>
+                      </div>
+                      <div class="img-for-form">
+                        <!-- <img src="assets/img/form.png"> -->
+                        <img src="assets/img/save.png" (click)="btnUploadPhoto_click()">
+                        <br>
+                        <input type="file" id="myFile" name="filename"  id="uploadingMsgPhoto" (change)="onFileChange($event)" hidden>
+                      </div>                       
+                    </form>
+                  </div>
+              </div>                   
+            <!-- </div> -->
+          </div>
+            <!-- today Chat -->
+  
+            <!-- Yesterday Chat -->
+            <div class="tab-pane fade" id="bordered-profile" role="tabpanel" aria-labelledby="profile-tab">
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+            </div>
+            <!-- Yesterday Chat -->
+  
+            <!-- Day Before Chat -->
+            <div class="tab-pane fade" id="bordered-contact" role="tabpanel" aria-labelledby="contact-tab">
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+              Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
+            </div>
+            <!-- Day Before Chat -->
+          </div>
+          <!-- End Bordered Tabs -->
+        </div>
+      </div>
+    </section>
+  
+  </main><!-- End #main -->
+  </div>
+  
+  
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkchattingApp=self.webpackChunkchattingApp||[]).push([[950],{950:(c,u,n)=>{n.r(u),n.d(u,{PagesModule:()=>s});var o=n(895),e=n(256);let s=(()=>{class a{}return a.\u0275fac=function(l){return new(l||a)},a.\u0275mod=e.oAB({type:a}),a.\u0275inj=e.cJS({imports:[o.ez]}),a})()}}]);
